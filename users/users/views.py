@@ -11,7 +11,6 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 # Create your views here.
 
 class Register(APIView):
-
     def post(self,request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():

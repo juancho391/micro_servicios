@@ -1,0 +1,21 @@
+version: '3'
+services:
+  products:
+    build: ./products  # Ruta donde tienes el Dockerfile del servicio de productos
+    ports:
+      - "8000:8000"  # Puerto en el que expones el servicio de productos
+    networks:
+      - microservicios
+
+  cart:
+    build: ./cart  # Ruta donde tienes el Dockerfile del servicio de carrito
+    ports:
+      - "8080:8080"  # Puerto en el que expones el servicio de carrito
+    depends_on:
+      - products  # Esto asegura que productos se levante antes que carrito
+    networks:
+      - microservicios
+
+networks:
+  microservicios:
+    driver: bridge  # Define una red "bridge" compartida entre ambos servicios

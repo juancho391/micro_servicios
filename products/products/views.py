@@ -12,6 +12,10 @@ from .authentication import JWTAuthenticationNoDB
 # Create your views here.
 
 class ListProducts(APIView):
+    """
+    Obtiene Lista de Los Productos Disponibles
+    """
+
     # authentication_classes = [JWTAuthenticationNoDB]
     # permission_classes = [IsAuthenticated]
     def get(self,request):

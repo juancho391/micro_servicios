@@ -40,4 +40,4 @@ Build and run the services using Docker Compose:
 docker-compose up --build
 The services should now be running. You can interact with them via their respective endpoints.
 
-I will add API documentation using swager 
+you can visit this url : "api/schema/swagger-ui/" to check the API documentation.
